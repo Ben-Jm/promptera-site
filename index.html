@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promptera — Adoption & Experience Consultancy · Botswana</title>
+<meta name="description" content="We fix the forms, processes, and tools that frustrate — so people can do what matters. Digital Adoption Assessments, process redesign, and experience audits in Botswana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Promptera home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 17 L10 11 L14 14 L20 7" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      Promptera
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#where">Where we work</a>
+      <a href="#services">Services</a>
+      <a href="#how">How we work</a>
+      <a href="#results">Results</a>
+    </nav>
+    <a href="#contact" class="btn btn-dark">Book a free walk-through</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow rv"><span class="dot"></span>Adoption &amp; Experience Consultancy · Gaborone</span>
+      <h1 class="rv d1">Every interaction creates value —<br><span class="flip">or leaks it.</span></h1>
+      <p class="hero-sub rv d2">A form, a queue, a phone call, an app. We walk the journeys your customers and staff actually move through — in stores, branches, lodges, campuses, and systems — find where the experience leaks value, and fix it. Measured before and after.</p>
+      <div class="hero-ctas rv d3">
+        <a href="#contact" class="btn btn-em">Get your free 2-hour walk-through</a>
+        <a href="#where" class="btn btn-ghost">See where it works</a>
+      </div>
+      <p class="hero-note rv d4">Customer &amp; employee experience · Digital, physical, or mixed · <strong>Findings are yours either way</strong></p>
+    </div>
+
+    <div class="demo rv d2" aria-label="Interactive demonstration: a frustrating form redesigned into a simple one">
+      <div class="demo-stage">
+        <div class="demo-toggle" role="group" aria-label="Toggle before and after">
+          <button id="tb" class="on" type="button">The form today</button>
+          <button id="ta" type="button">After redesign</button>
+        </div>
+        <div class="formcard state-before" id="formcard">
+          <div class="fc-head">
+            <span class="fc-title">Loan application — Step <span id="fstep">1 of 6</span></span>
+            <span class="fc-badge" id="fbadge">34% complete it</span>
+          </div>
+          <div class="fstack">
+            <div class="frow"><span class="flabel">FULL NAME (AS PER OMANG)</span><div class="finput ok"></div></div>
+            <div class="frow only-before"><span class="flabel">TITLE / SALUTATION *</span><div class="finput err"></div><span class="ferr">Required field</span></div>
+            <div class="frow"><span class="flabel">MOBILE NUMBER</span><div class="finput ok"></div></div>
+            <div class="frow only-before"><span class="flabel">FAX NUMBER *</span><div class="finput err"></div><span class="ferr">Invalid format</span></div>
+            <div class="frow only-before"><span class="flabel">EMPLOYER PHYSICAL ADDRESS (LINE 2)</span><div class="finput"></div></div>
+            <div class="frow"><span class="flabel">MONTHLY INCOME (BWP)</span><div class="finput ok"></div></div>
+            <div class="frow only-before"><span class="flabel">RE-ENTER MONTHLY INCOME *</span><div class="finput err"></div><span class="ferr">Values do not match</span></div>
+          </div>
+          <div class="fsubmit" id="fsubmit">Submit for branch verification</div>
+          <div class="fmeter"><span id="ftime">~40 min</span><div class="fbar"><span></span></div><span id="fcomp">completion</span></div>
+        </div>
+      </div>
+      <div class="chip chip1"><span class="cv">72%</span><span class="cl">faster<br>processing</span></div>
+      <div class="chip chip2"><span class="cv">66→89%</span><span class="cl">completion<br>rate</span></div>
+      <p class="demo-cap">A form is one interface. Queues, arrivals, check-ins, and calls get the same treatment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF STRIP ============ -->
+<div class="strip">
+  <div class="wrap strip-in">
+    <div class="stat rv"><div class="n" data-count="72"><em>0%</em></div><div class="l">faster loan processing</div></div>
+    <div class="stat rv d1"><div class="n" data-count="156"><em>+0%</em></div><div class="l">customer engagement</div></div>
+    <div class="stat rv d2"><div class="n" data-count="41"><em>+0</em></div><div class="l">NPS improvement</div></div>
+    <div class="stat rv d3"><div class="n" data-count="91"><em>0%</em></div><div class="l">internal tool adoption</div></div>
+  </div>
+  <div class="strip-cap">Measured results from our experience and adoption redesigns</div>
+</div>
+
+<!-- ============ THE QUESTION ============ -->
+<section id="question">
+  <div class="wrap">
+    <div class="qband rv">
+      <div class="qband-grid">
+        <div>
+          <p class="qline">“How much did you spend on the system?”<br><span class="q2">“And how many of your people use it correctly today?”</span></p>
+          <p>That gap is an experience problem, not an IT problem — and the same leak runs through your customer's day: the queue that stalls, the check-in that drags, the form abandoned halfway. Staff-side or customer-side, we measure the leak, then close it.</p>
+        </div>
+        <div class="leak" aria-label="Example of value leaking from a software investment">
+          <div class="leak-row"><span>System investment</span><b>P2,000,000</b></div>
+          <div class="leak-row"><span>Staff using it correctly</span><b class="neg">~40%</b></div>
+          <div class="leak-row"><span>Workarounds in spreadsheets</span><b class="neg">11 found</b></div>
+          <div class="leak-row"><span>Value currently realised</span><b class="neg">P820,000</b></div>
+          <div class="leak-row"><span>Recoverable with redesign</span><b class="pos">P980,000+</b></div>
+          <div class="leak-cap">Illustrative <b>ROI Leakage Assessment</b> — every full audit includes yours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHERE WE WORK / VERTICALS ============ -->
+<section id="where" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow rv">Where we work</div>
+      <h2 class="rv d1">Every queue, form, and wait is a journey we can fix.</h2>
+      <p class="sec-sub rv d2">Customer experience and employee experience, across sectors and domains. The method is the same wherever people wait, ask, or fill something in — on a screen, on a shop floor, or both at once.</p>
+    </div>
+
+    <div class="uc-grid">
+      <!-- RETAIL -->
+      <article class="uc rv">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 170" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="170" fill="#EAF3EE"/>
+            <rect x="30" y="98" width="52" height="44" rx="6" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="96" y="84" width="52" height="58" rx="6" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="162" y="98" width="52" height="44" rx="6" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="252" y="70" width="76" height="72" rx="8" fill="#111827"/>
+            <rect x="266" y="84" width="48" height="8" rx="4" fill="#34D399"/>
+            <rect x="266" y="100" width="34" height="6" rx="3" fill="#4B5563"/>
+            <circle cx="46" cy="88" r="7" fill="#DC7D5F" opacity=".85"/>
+            <circle cx="66" cy="88" r="7" fill="#DC7D5F" opacity=".55"/>
+            <circle class="jd" style="--jdist:214px" cx="86" cy="88" r="7" fill="#059669"/>
+            <path d="M30 152h300" stroke="#D5E6DC" stroke-width="2"/>
+            <text x="30" y="40" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#047857">ENTRY → BROWSE → QUEUE → PAY</text>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Retail Experience</h3>
+          <div class="journey">Entry → Browse → Queue → Pay → Return</div>
+          <p>Customers rarely complain — they just don't come back. We audit your store the way a shopper experiences it, find where sales leak (queues, layout, ad-hoc WhatsApp orders), and fix the friction.</p>
+        </div>
+      </article>
+
+      <!-- HOSPITALITY -->
+      <article class="uc rv d1">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 170" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="170" fill="#0F2E25"/>
+            <circle cx="300" cy="42" r="20" fill="#FCB913" opacity=".92"/>
+            <path d="M0 128 C60 108 110 132 180 118 C250 104 300 126 360 112 L360 170 L0 170 Z" fill="#123B2F"/>
+            <path d="M0 146 C80 132 150 152 230 140 C290 131 330 146 360 138 L360 170 L0 170 Z" fill="#175041"/>
+            <rect x="46" y="84" width="86" height="52" rx="6" fill="#FAFAF9"/>
+            <path d="M40 84 L89 58 L138 84 Z" fill="#34D399"/>
+            <rect x="80" y="106" width="18" height="30" rx="2" fill="#175041"/>
+            <g font-family="IBM Plex Mono, monospace" font-weight="600">
+              <text x="196" y="86" font-size="11" fill="#FCB913">★★★★★</text>
+              <text x="196" y="104" font-size="9.5" fill="#9FD9C3">"Seamless from arrival</text>
+              <text x="196" y="117" font-size="9.5" fill="#9FD9C3">to checkout."</text>
+            </g>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Guest Experience</h3>
+          <div class="journey">Booking → Arrival → Stay → Review → Rebook</div>
+          <p>Lodges and hotels compete globally, and the competition is decided in moments: the arrival after a long transfer, the question nobody answered. We fix the moments that decide your reviews.</p>
+        </div>
+      </article>
+
+      <!-- BANKING -->
+      <article class="uc rv d2">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 170" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="170" fill="#F1F5F3"/>
+            <rect x="34" y="44" width="150" height="98" rx="8" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="48" y="60" width="60" height="9" rx="4" fill="#111827"/>
+            <rect x="48" y="78" width="122" height="7" rx="3" fill="#E9E7E1"/>
+            <rect x="48" y="92" width="122" height="7" rx="3" fill="#E9E7E1"/>
+            <rect x="48" y="106" width="90" height="7" rx="3" fill="#FBD9CB"/>
+            <rect x="48" y="122" width="64" height="12" rx="6" fill="#059669"/>
+            <rect x="222" y="34" width="66" height="118" rx="12" fill="#111827"/>
+            <rect x="232" y="48" width="46" height="70" rx="5" fill="#1F2937"/>
+            <rect x="238" y="56" width="34" height="7" rx="3" fill="#34D399"/>
+            <rect x="238" y="70" width="26" height="6" rx="3" fill="#4B5563"/>
+            <rect x="238" y="82" width="30" height="6" rx="3" fill="#4B5563"/>
+            <circle cx="255" cy="136" r="7" fill="#374151"/>
+            <path d="M192 92 h22" stroke="#059669" stroke-width="2.5" stroke-dasharray="4 4"/>
+            <path d="M210 86 l8 6 -8 6" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Branch &amp; Banking Hall</h3>
+          <div class="journey">Arrival → Ticket → Wait → Teller → Resolution</div>
+          <p>Customers don't switch banks over rates — they switch over Tuesday mornings in your queue. We audit hall and app together, and show exactly which visits belong in the channel you already paid for.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="uc-more rv d3">
+      <article class="uc uc-sm">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="118" fill="#EAF3EE"/>
+            <rect x="42" y="46" width="112" height="52" rx="4" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="54" y="60" width="14" height="38" fill="#DDEBE2"/><rect x="76" y="60" width="14" height="38" fill="#DDEBE2"/><rect x="98" y="60" width="14" height="38" fill="#DDEBE2"/><rect x="120" y="60" width="14" height="38" fill="#DDEBE2"/>
+            <path d="M36 46 L98 24 L160 46 Z" fill="#059669"/>
+            <rect x="96" y="8" width="3" height="20" fill="#312F30"/>
+            <path d="M99 8 L120 13 L99 18 Z" fill="#FCB913"/>
+            <path d="M175 96 C210 96 220 70 258 70 C290 70 300 52 322 52" stroke="#059669" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round" fill="none"/>
+            <circle cx="322" cy="52" r="7" fill="#059669"/>
+            <text x="200" y="102" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600" fill="#047857">DAY ONE → FIRST WEEKS</text>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Student Onboarding</h3>
+          <div class="journey">Apply → Register → Orient → First weeks</div>
+          <p>Registration queues, scattered information, first-years lost when the experience should be winning their loyalty.</p>
+          <span class="tag tag-now">Available now</span>
+        </div>
+      </article>
+      <article class="uc uc-sm">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="118" fill="#F1F5F3"/>
+            <rect x="30" y="84" width="300" height="8" rx="4" fill="#DDE7E0"/>
+            <circle cx="120" cy="62" r="26" fill="#fff" stroke="#D5E6DC" stroke-width="2"/>
+            <circle cx="120" cy="62" r="15" fill="#EAF3EE"/>
+            <path d="M104 26 c0 6 4 6 4 12 M116 22 c0 6 4 6 4 12 M128 26 c0 6 4 6 4 12" stroke="#9CB8A9" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <rect x="200" y="30" width="58" height="62" rx="5" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="208" y="40" width="30" height="6" rx="3" fill="#312F30"/>
+            <rect x="208" y="54" width="42" height="4" rx="2" fill="#E4E2DC"/>
+            <rect x="208" y="64" width="42" height="4" rx="2" fill="#E4E2DC"/>
+            <rect x="208" y="74" width="28" height="4" rx="2" fill="#E4E2DC"/>
+            <circle cx="296" cy="52" r="16" fill="#fff" stroke="#D5E6DC" stroke-width="2"/>
+            <path d="M296 43 v9 l6 4" stroke="#FCB913" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Restaurant &amp; QSR</h3>
+          <div class="journey">Arrive → Menu → Order → Wait → Pay</div>
+          <p>Menus that stall decisions, waits that feel longer than they are, payment friction that sours a good meal.</p>
+          <span class="tag tag-now">Available now</span>
+        </div>
+      </article>
+      <article class="uc uc-sm">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="118" fill="#312F30"/>
+            <path d="M96 0 L66 118 L150 118 Z" fill="rgba(252,185,19,.14)"/>
+            <path d="M250 0 L214 118 L298 118 Z" fill="rgba(252,185,19,.14)"/>
+            <circle cx="96" cy="6" r="7" fill="#FCB913"/>
+            <circle cx="250" cy="6" r="7" fill="#FCB913"/>
+            <g fill="#34D399"><circle cx="90" cy="100" r="6"/><circle cx="116" cy="104" r="6"/><circle cx="142" cy="99" r="6"/><circle cx="196" cy="103" r="6"/><circle cx="224" cy="98" r="6"/><circle cx="252" cy="104" r="6"/></g>
+            <g fill="#F5F2EA" opacity=".85"><circle cx="103" cy="108" r="6"/><circle cx="129" cy="110" r="6"/><circle cx="210" cy="110" r="6"/><circle cx="238" cy="108" r="6"/></g>
+            <rect x="300" y="34" width="42" height="26" rx="4" fill="#F5F2EA"/>
+            <circle cx="321" cy="47" r="6" fill="none" stroke="#FCB913" stroke-width="2" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Events, Sports &amp; Nightlife</h3>
+          <div class="journey">Ticket → Entry → Service → Exit</div>
+          <p>Entry queues that eat the first hour, bar service that can't match half-time. Flow design for when everyone arrives at once.</p>
+          <span class="tag tag-select">Selective engagements</span>
+        </div>
+      </article>
+      <article class="uc uc-sm">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="118" fill="#F1F5F3"/>
+            <rect x="40" y="30" width="70" height="62" rx="6" fill="#fff" stroke="#D5E6DC"/>
+            <rect x="67" y="48" width="16" height="5" rx="2" fill="#059669"/><rect x="72.5" y="42.5" width="5" height="16" rx="2" fill="#059669"/>
+            <rect x="52" y="66" width="46" height="4" rx="2" fill="#E4E2DC"/><rect x="52" y="76" width="32" height="4" rx="2" fill="#E4E2DC"/>
+            <g><rect x="150" y="66" width="26" height="20" rx="3" fill="#fff" stroke="#D5E6DC"/><rect x="184" y="66" width="26" height="20" rx="3" fill="#fff" stroke="#D5E6DC"/><rect x="218" y="66" width="26" height="20" rx="3" fill="#fff" stroke="#D5E6DC"/></g>
+            <circle cx="163" cy="56" r="7" fill="#9CB8A9"/><circle cx="197" cy="56" r="7" fill="#9CB8A9"/>
+            <rect x="276" y="30" width="54" height="36" rx="6" fill="#312F30"/>
+            <text x="303" y="54" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" font-weight="600" fill="#FCB913">07</text>
+            <text x="276" y="102" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600" fill="#047857">NOW SERVING</text>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Patient Experience</h3>
+          <div class="journey">Book → Arrive → Wait → Consult → Collect</div>
+          <p>Waiting without knowing how long, the same details written three times, pharmacy queues after the consult.</p>
+          <span class="tag tag-select">Selective · private clinics</span>
+        </div>
+      </article>
+      <article class="uc uc-sm">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="118" fill="#EAF3EE"/>
+            <rect x="36" y="34" width="118" height="58" rx="10" fill="#312F30"/>
+            <rect x="48" y="44" width="94" height="22" rx="4" fill="#4A4849"/>
+            <rect x="48" y="44" width="28" height="22" rx="4" fill="#7FB9A4"/>
+            <circle cx="62" cy="94" r="9" fill="#1D1C1D" stroke="#4A4849" stroke-width="3"/>
+            <circle cx="128" cy="94" r="9" fill="#1D1C1D" stroke="#4A4849" stroke-width="3"/>
+            <circle cx="46" cy="76" r="4" fill="#FCB913"/><circle cx="144" cy="76" r="4" fill="#FCB913"/>
+            <path d="M180 78 h150" stroke="#059669" stroke-width="2.5" fill="none"/>
+            <circle cx="196" cy="78" r="6" fill="#fff" stroke="#059669" stroke-width="2.5"/>
+            <circle cx="252" cy="78" r="6" fill="#fff" stroke="#059669" stroke-width="2.5"/>
+            <circle cx="308" cy="78" r="6" fill="#059669"/>
+            <text x="180" y="102" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600" fill="#047857">EVERY STOP ON TIME</text>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Passenger &amp; Transport</h3>
+          <div class="journey">Ticket → Board → Travel → Arrive</div>
+          <p>Wayfinding that assumes you know the way, information only staff hold, queues without order or updates.</p>
+          <span class="tag tag-tender">Via partnership &amp; tender</span>
+        </div>
+      </article>
+      <article class="uc uc-sm">
+        <div class="uc-scene" aria-hidden="true">
+          <svg viewBox="0 0 360 118" preserveAspectRatio="xMidYMid slice">
+            <rect width="360" height="118" fill="#F5F2EA"/>
+            <rect x="60" y="22" width="88" height="80" rx="5" fill="#fff" stroke="#E2DDD1"/>
+            <rect x="72" y="34" width="44" height="6" rx="3" fill="#312F30"/>
+            <rect x="72" y="48" width="64" height="4" rx="2" fill="#E4E2DC"/><rect x="72" y="58" width="64" height="4" rx="2" fill="#E4E2DC"/><rect x="72" y="68" width="48" height="4" rx="2" fill="#E4E2DC"/>
+            <circle cx="122" cy="86" r="17" fill="none" stroke="#059669" stroke-width="2.5" transform="rotate(-12 122 86)"/>
+            <path d="M114 86 l6 6 11 -12" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#9CB8A9"><circle cx="212" cy="86" r="7"/><circle cx="238" cy="86" r="7"/><circle cx="264" cy="86" r="7"/></g>
+            <circle cx="290" cy="86" r="7" fill="#FCB913"/>
+            <path d="M212 62 h78" stroke="#E2DDD1" stroke-width="2" stroke-dasharray="3 5"/>
+            <text x="206" y="46" font-family="IBM Plex Mono, monospace" font-size="9.5" font-weight="600" fill="#8A6200">CHECKED AT THE DOOR</text>
+          </svg>
+        </div>
+        <div class="uc-body">
+          <h3>Citizen Services</h3>
+          <div class="journey">Apply → Queue → Approve → Collect</div>
+          <p>Forms rejected after the queue instead of before it, multiple trips for one service. Redesign that restores dignity to public queues.</p>
+          <span class="tag tag-tender">Via tender, referenced</span>
+        </div>
+      </article>
+    </div>
+    <p class="ladder-note rv d4">Employee experience runs through all of it — the staff-side systems, handovers, and workarounds behind every customer moment are part of every audit.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow rv">The engine</div>
+      <h2 class="rv d1">One method underneath.<br>Five ways to engage.</h2>
+      <p class="sec-sub rv d2">Whatever the sector, every engagement runs on the same engine: observe real behaviour, map the friction, redesign the moments that matter, measure the result.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc flag rv" data-modal="sv1" tabindex="0" role="button" aria-haspopup="dialog">
+        <span class="flag-pill">Flagship</span>
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></div>
+        <h3>Experience &amp; Adoption Assessment</h3>
+        <p>The full audit — digital, physical, or mixed. We walk the journey as your customers and staff experience it, measure where value leaks (abandonment, queues, workarounds, unused systems), and hand you a prioritised fix roadmap with an ROI Leakage Assessment.</p>
+        <button class="card-btn" type="button">See what's included <span aria-hidden="true">→</span></button>
+        <div class="svc-meta"><span class="svc-price"><span class="free-tag">Free 2-hr walk-through</span>Full: P15,000–50,000</span><span class="svc-role">Start here</span></div>
+      </div>
+      <div class="svc rv d1" data-modal="sv2" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M18 15l3 3-3 3"/></svg></div>
+        <h3>Form &amp; Process Redesign</h3>
+        <p>Fix the forms customers abandon and the processes staff work around — paper or digital. One fix, fixed price, measured before and after.</p>
+        <button class="card-btn" type="button">See what's included <span aria-hidden="true">→</span></button>
+        <div class="svc-meta"><span class="svc-price">P5,000–15,000</span><span class="svc-role">Quick win</span></div>
+      </div>
+      <div class="svc rv d1" data-modal="sv3" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+        <h3>Adoption &amp; Workflow Redesign</h3>
+        <p>You bought the system — we make people actually use it. Workflows, approval flows, dashboards, and navigation redesigned around real behaviour.</p>
+        <button class="card-btn" type="button">See what's included <span aria-hidden="true">→</span></button>
+        <div class="svc-meta"><span class="svc-price">P25,000–150,000+</span><span class="svc-role">Enterprise</span></div>
+      </div>
+      <div class="svc rv d2" data-modal="sv4" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3>Smart Workflows &amp; Automation</h3>
+        <p>Kill duplicate data entry, manual report compilation, and copy-paste between systems. Smarter connections between the tools you already own.</p>
+        <button class="card-btn" type="button">See what's included <span aria-hidden="true">→</span></button>
+        <div class="svc-meta"><span class="svc-price">P8,000–25,000</span><span class="svc-role">Add-on</span></div>
+      </div>
+      <div class="svc rv d2" data-modal="sv5" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4.5-2.5 7-5.5 7-10V5l-7-2-7 2v6c0 4.5 2.5 7.5 7 10z"/><path d="M9 11.5l2 2 4-4"/></svg></div>
+        <h3>Adoption Program</h3>
+        <p>We stay after the fix: onboarding, user testing, training, change support, and monthly KPI monitoring — so improvements stick and new friction gets caught early.</p>
+        <button class="card-btn" type="button">See what's included <span aria-hidden="true">→</span></button>
+        <div class="svc-meta"><span class="svc-price">From P3,000/mo</span><span class="svc-role">Retainer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section id="how" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow rv">How we work</div>
+      <h2 class="rv d1">Start free. Prove it small. Scale what works.</h2>
+    </div>
+    <div class="ladder">
+      <div class="rung free rv">
+        <h3>Free mini-audit</h3>
+        <p>Two hours on one process, system, or journey — a store walk-through, a branch visit, or a screen-share. You get written findings whether or not we ever work together.</p>
+        <div class="rp">P0 · No obligation</div>
+      </div>
+      <div class="rung rv d1">
+        <h3>One measured fix</h3>
+        <p>We pick the friction point with the highest return, redesign it, and measure before and after — completion rates, wait times, support queries. Proof, not promises.</p>
+        <div class="rp">From P5,000 · 2–4 weeks</div>
+      </div>
+      <div class="rung rv d2">
+        <h3>Full journey, then it sticks</h3>
+        <p>A complete assessment and redesign across the journey, followed by an adoption program that keeps the gains — training, monitoring, and monthly KPI reporting.</p>
+        <div class="rp">P15,000+ · Retainer optional</div>
+      </div>
+    </div>
+    <p class="ladder-note rv d3">Every step earns the next. In a market where reputation travels fast, that's how it should be.</p>
+    <div class="rung-cta rv d3"><a href="#contact" class="btn btn-em" data-ctx="Free 2-hour walk-through">Book your free walk-through <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section id="results" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-eyebrow rv">Results</div>
+      <h2 class="rv d1">Measured before. Measured after.<br>That's the whole point.</h2>
+    </div>
+    <div class="cs-grid">
+      <article class="cs rv" data-modal="cs1" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="cs-hero g1"><span class="initial" aria-hidden="true">L</span>
+          <div class="cs-pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>Loan Application System</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-sector">Financial services</div>
+          <div class="cs-stats">
+            <div class="cs-stat"><div class="v">72%</div><div class="k">faster processing</div></div>
+            <div class="cs-stat"><div class="v">66→89%</div><div class="k">completion rate</div></div>
+            <div class="cs-stat"><div class="v">−45%</div><div class="k">support queries</div></div>
+          </div>
+          <button class="card-btn" type="button">Read the full story <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+      <article class="cs rv d1" data-modal="cs2" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="cs-hero g2"><span class="initial" aria-hidden="true">C</span>
+          <div class="cs-pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>Customer-Facing Platform</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-sector">Multi-sector digital</div>
+          <div class="cs-stats">
+            <div class="cs-stat"><div class="v">+156%</div><div class="k">engagement</div></div>
+            <div class="cs-stat"><div class="v">−44%</div><div class="k">call volume</div></div>
+            <div class="cs-stat"><div class="v">+41</div><div class="k">NPS</div></div>
+          </div>
+          <button class="card-btn" type="button">Read the full story <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+      <article class="cs rv d1" data-modal="cs3" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="cs-hero g3"><span class="initial" aria-hidden="true">R</span>
+          <div class="cs-pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>Compliance Management Tools</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-sector">Regulatory · enterprise</div>
+          <div class="cs-stats">
+            <div class="cs-stat"><div class="v">3×</div><div class="k">faster audit prep</div></div>
+            <div class="cs-stat"><div class="v">−67%</div><div class="k">compliance gaps</div></div>
+          </div>
+          <button class="card-btn" type="button">Read the full story <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+      <article class="cs rv d2" data-modal="cs4" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="cs-hero g4"><span class="initial" aria-hidden="true">P</span>
+          <div class="cs-pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>Interactive Culture Playbook</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-sector">HR · internal adoption</div>
+          <div class="cs-stats">
+            <div class="cs-stat"><div class="v">91%</div><div class="k">adoption</div></div>
+            <div class="cs-stat"><div class="v">−35%</div><div class="k">time-to-productivity</div></div>
+          </div>
+          <button class="card-btn" type="button">Read the full story <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+    </div>
+    <p class="cs-note rv d3">Results from our experience and adoption redesigns — the same method we now bring to shop floors, banking halls, and guest journeys across Botswana.</p>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="contact">
+  <div class="wrap final-in">
+    <div>
+      <div class="sec-eyebrow rv">Start free</div>
+      <h2 class="rv d1">Two hours. One journey.<br>Findings yours to keep.</h2>
+      <p class="sec-sub rv d2">Tell us which journey frustrates people the most — customers or staff, on screens or on floors. We'll spend two hours on it, on-site or screen-share, and send you written findings. No charge, no obligation, no pitch until you ask.</p>
+      <p class="hero-note rv d3" style="margin-top:20px">hello@promptera.co.bw · +267 7X XXX XXX · Gaborone, Botswana</p>
+    </div>
+    <form class="contact-card rv d2" id="cform" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="context" id="ctxfield" value="">
+      <p style="display:none"><label>Don’t fill this in: <input name="bot-field"></label></p>
+      <div class="ctx-chip" id="ctxchip"><span id="ctxtext"></span><button type="button" id="ctxclear" aria-label="Clear topic">✕</button></div>
+      <div class="row"><label for="cn">Your name</label><input id="cn" name="name" type="text" placeholder="Kabelo Motse" required></div>
+      <div class="row"><label for="ce">Work email</label><input id="ce" name="email" type="email" placeholder="you@company.co.bw" required></div>
+      <div class="row"><label for="cs">What should we look at first?</label>
+        <select id="cs" name="topic">
+          <option>A store, branch, or venue journey (free walk-through)</option>
+          <option>A guest / hospitality journey</option>
+          <option>A form or process people abandon</option>
+          <option>A system staff aren't using properly</option>
+          <option>An employee or onboarding journey</option>
+          <option>Not sure yet — help me choose</option>
+        </select>
+      </div>
+      <button class="btn btn-em" type="submit">Book my free mini-audit</button>
+      <p class="contact-fine">We reply within one working day. Your details stay with us.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <a href="#top" class="logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17 L10 11 L14 14 L20 7" stroke="#34D399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Promptera</a>
+      <p class="foot-tag">We fix the forms, processes, and tools that frustrate — so people can do what matters.</p>
+    </div>
+    <div class="foot-col"><b>Services</b>
+      <a href="#services">Experience &amp; Adoption Assessment</a><br>
+      <a href="#services">Form &amp; Process Redesign</a><br>
+      <a href="#services">Adoption &amp; Workflow Redesign</a><br>
+      <a href="#services">Smart Workflows &amp; Automation</a><br>
+      <a href="#services">Adoption Program</a>
+    </div>
+    <div class="foot-col"><b>Company</b>
+      <a href="#how">How we work</a><br>
+      <a href="#where">Where we work</a><br>
+      <a href="#results">Results</a><br>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="foot-col"><b>Contact</b>
+      hello@promptera.co.bw<br>
+      +267 7X XXX XXX<br>
+      Gaborone, Botswana
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© 2026 Promptera. All rights reserved.</span>
+    <span>Every interaction either creates value or leaks it.</span>
+  </div>
+</footer>
+
+
+<!-- ============ MODAL ============ -->
+<div class="mov" id="mov" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+    <button class="mclose" id="mclose" aria-label="Close">✕</button>
+    <div class="m-eyebrow" id="meyebrow"></div>
+    <h3 class="m-title" id="mtitle"></h3>
+    <div class="m-body" id="mbody"></div>
+    <div class="m-cta">
+      <button class="btn btn-em" id="mcta" type="button"></button>
+      <span class="fine">2 hours · written findings · no obligation</span>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
