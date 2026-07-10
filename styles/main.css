@@ -325,3 +325,26 @@ h1 .flip{background:linear-gradient(transparent 76%, rgba(252,185,19,.4) 76%);pa
   var(--charcoal)}
 .qband::after{display:none}
 .leak-cap b{color:var(--gold)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;margin-bottom:64px}
+.about-story p{font-size:15.5px;color:var(--body);line-height:1.7;margin-top:16px;max-width:560px}
+.about-pull{font-family:var(--display);font-size:19px;font-weight:600;color:var(--ink);letter-spacing:-.01em;line-height:1.45;border-left:3px solid var(--gold);padding-left:18px}
+.about-aside{display:flex;flex-direction:column;gap:14px;margin-top:44px}
+.about-fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:16px;font-size:14px;color:var(--body);line-height:1.5;transition:transform .3s var(--ease),border-color .3s}
+.about-fact:hover{transform:translateY(-2px);border-color:#D9E8E1}
+.af-n{font-family:var(--mono);font-size:24px;font-weight:600;color:var(--emerald);flex-shrink:0;width:34px;text-align:center}
+.team-head h3{font-family:var(--display);font-size:24px;font-weight:650;letter-spacing:-.015em}
+.team-head p{font-size:14.5px;color:var(--body);max-width:520px;margin:8px 0 28px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;text-align:center;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.tcard:hover{transform:translateY(-3px);box-shadow:0 20px 42px -24px rgba(17,24,39,.25)}
+.t-photo{width:84px;height:84px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-family:var(--display);font-size:32px;font-weight:700;color:#fff}
+.tp1{background:linear-gradient(135deg,#065F46,#34D399)}
+.tp2{background:linear-gradient(135deg,#0F766E,#2DD4BF)}
+.tp3{background:linear-gradient(135deg,#8A6200,#FCB913)}
+.t-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.t-name{font-family:var(--display);font-size:17px;font-weight:650;letter-spacing:-.01em}
+.t-role{font-size:12px;font-weight:600;color:var(--emerald-deep);margin:4px 0 10px}
+.t-bio{font-size:13px;color:var(--body);line-height:1.6}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:28px}.about-aside{margin-top:0}.team-grid{grid-template-columns:1fr}}
