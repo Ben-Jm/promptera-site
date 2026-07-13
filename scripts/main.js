@@ -137,7 +137,7 @@
       '<h4>What\'s included</h4><ul><li>Workflows, approval flows, dashboards, and navigation redesigned around real behaviour</li><li>Service blueprints connecting staff-side systems to customer-side moments</li><li>Configuration changes — with specialist partners for deep platform work, while we own the experience and adoption layer</li></ul>'+
       '<h4>Who it\'s for</h4><p>Enterprises with a recent implementation and quiet frustration: usage below expectations, workarounds multiplying, KPIs that were supposed to move but haven\'t.</p>'+
       '<div class="m-price">P25,000–150,000+ · scoped from assessment findings</div>'},
-    sv4:{eyebrow:'The engine · Efficiency add-on',title:'Smart Workflows & Automation',cta:'Start with the free walk-through',ctx:'Re: Smart Workflows & Automation',
+    sv4:{eyebrow:'The engine · Efficiency add-on',title:'Smart Workflows & Time-Savers',cta:'Start with the free walk-through',ctx:'Re: Smart Workflows & Time-Savers',
       body:'<p>Kill duplicate data entry, manual report compilation, and copy-paste between systems — with smarter connections between tools you already own. No expensive new systems.</p>'+
       '<h4>What\'s included</h4><ul><li>Audit of repetitive, manual, and duplicated work</li><li>Automations built on Power Automate, Zapier, or your existing stack</li><li>Documentation so your team owns and maintains what we build</li></ul>'+
       '<h4>Who it\'s for</h4><p>Teams retyping the same data into two systems, compiling reports by hand, or running the business on copy-paste.</p>'+
