@@ -1,5 +1,5 @@
 /* ============================================================
-   Promptera — main stylesheet
+   Promptera: main stylesheet
    Brand tokens are in :root below (colors, fonts, easing).
    Sections are ordered to match index.html top-to-bottom.
    ============================================================ */
@@ -81,7 +81,7 @@ h1 .flip{color:var(--emerald);display:inline-block;position:relative}
 .hero-note{font-size:13px;color:var(--muted);margin-top:14px}
 .hero-note strong{color:var(--emerald-deep);font-weight:600}
 
-/* hero visual — the self-fixing form */
+/* hero visual: the self-fixing form */
 .demo{position:relative}
 .demo-stage{position:relative;border-radius:20px;background:linear-gradient(150deg,#F1F5F3,#E7EFEA 55%,#EAF3EE);border:1px solid var(--line);padding:34px 30px 30px;box-shadow:0 30px 60px -35px rgba(17,24,39,.25)}
 .demo-toggle{position:absolute;top:-16px;left:50%;transform:translateX(-50%);display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;box-shadow:0 8px 20px -10px rgba(17,24,39,.2);z-index:3}
