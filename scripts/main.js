@@ -126,27 +126,27 @@
       body:'<p>The full audit, covering digital, physical, or a mix of both. We walk the journey the way your customers and staff actually experience it and show you exactly where value leaks.</p>'+
       '<h4>What\'s included</h4><ul><li>Journey walked customer-side and staff-side, built from observation</li><li>Adoption metrics and workaround inventory for the systems involved</li><li>Friction points ranked by what each is costing you</li><li>ROI Leakage Assessment: what you invested versus the value you\'re actually getting</li><li>Prioritised fix roadmap, sequenced by effort and return</li></ul>'+
       '<h4>Who it\'s for</h4><p>Any organisation that put in a new system in the last three years, or runs a venue journey (store, branch, lodge, campus, clinic) that frustrates people.</p>'+
-      '<div class="m-price"><span class="free-tag">Starts free, 2-hr walk-through</span> Full assessment: P15,000–50,000</div>'},
+      '<div class="m-price"><span class="free-tag">Starts free, 2-hr walk-through</span> Full assessment</div>'},
     sv2:{eyebrow:'The engine · Quick win',title:'Form & Process Redesign',cta:'Start with the free walk-through',ctx:'Re: Form & Process Redesign',
       body:'<p>One form or process people abandon or work around, fixed at a fixed price, measured before and after. Paper or digital, doesn\'t matter.</p>'+
       '<h4>What\'s included</h4><ul><li>Observation of real people using the current form or process</li><li>Redesign: field order, plain language, error prevention, fewer steps</li><li>Before/after measurement: completion, time, support queries</li></ul>'+
       '<h4>Who it\'s for</h4><p>Applications customers abandon, internal processes staff route around, anything with a rejection or repeat-visit problem. Typical duration 2–4 weeks.</p>'+
-      '<div class="m-price">P5,000–15,000 · fixed price per fix</div>'},
+      '<div class="m-price">Fixed price per fix</div>'},
     sv3:{eyebrow:'The engine · Enterprise',title:'Adoption & Workflow Redesign',cta:'Start with the free walk-through',ctx:'Re: Adoption & Workflow Redesign',
       body:'<p>You bought the system. We make people actually use it. This is where assessment findings get implemented at scale.</p>'+
       '<h4>What\'s included</h4><ul><li>Workflows, approval flows, dashboards, and navigation redesigned around real behaviour</li><li>Service blueprints connecting staff-side systems to customer-side moments</li><li>Configuration changes done with specialist partners for deep platform work, while we own the experience and adoption layer</li></ul>'+
       '<h4>Who it\'s for</h4><p>Enterprises with a recent implementation and quiet frustration: usage below expectations, workarounds multiplying, KPIs that were supposed to move but haven\'t.</p>'+
-      '<div class="m-price">P25,000–150,000+ · scoped from assessment findings</div>'},
+      '<div class="m-price">Scoped from assessment findings</div>'},
     sv4:{eyebrow:'The engine · Efficiency add-on',title:'Smart Workflows & Time-Savers',cta:'Start with the free walk-through',ctx:'Re: Smart Workflows & Time-Savers',
       body:'<p>Kill duplicate data entry, manual report compilation, and copy-paste between systems. Just smarter connections between tools you already own. No expensive new systems needed.</p>'+
       '<h4>What\'s included</h4><ul><li>Audit of repetitive, manual, and duplicated work</li><li>Automations built on Power Automate, Zapier, or your existing stack</li><li>Documentation so your team owns and maintains what we build</li></ul>'+
       '<h4>Who it\'s for</h4><p>Teams retyping the same data into two systems, compiling reports by hand, or running the business on copy-paste.</p>'+
-      '<div class="m-price">P8,000–25,000</div>'},
+      '<div class="m-price"></div>'},
     sv5:{eyebrow:'The engine · Retainer',title:'Adoption Program',cta:'Start with the free walk-through',ctx:'Re: Adoption Program (retainer)',
       body:'<p>We stay on after the fix, so improvements stick and new friction gets caught early instead of quietly piling up again.</p>'+
       '<h4>What\'s included</h4><ul><li>Staff onboarding and training improvement</li><li>Ongoing user testing and change management support</li><li>Monthly KPI monitoring and reporting: adoption, completion, wait times</li></ul>'+
       '<h4>Who it\'s for</h4><p>Organisations that have completed a redesign and want the gains protected, or that keep seeing improvements decay after every initiative.</p>'+
-      '<div class="m-price">P3,000–8,000/mo SME · P10,000–25,000/mo enterprise</div>'}
+      '<div class="m-price"></div>'}
   };
 
   var mov=document.getElementById('mov'),mtitle=document.getElementById('mtitle'),

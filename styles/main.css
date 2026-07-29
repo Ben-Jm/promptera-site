@@ -49,7 +49,7 @@ a{color:inherit;text-decoration:none}
 .logo{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
 .logo-mark{width:26px;height:26px;border-radius:8px;background:var(--ink);display:grid;place-items:center}
 .logo-mark svg{width:14px;height:14px}
-.logo img{height:40px;width:auto;display:block}
+.logo img{height:50px;width:auto;display:block}
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{font-size:14.5px;font-weight:500;color:var(--body);position:relative;padding:4px 0}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--emerald);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
@@ -303,7 +303,7 @@ body.modal-open{overflow:hidden}
 
 
 /* ---------- gold accent + dark sections ---------- */
-h1 .flip{background:linear-gradient(transparent 76%, rgba(252,185,19,.4) 76%);padding:0 3px}
+h1 .flip{padding:0 3px}
 .tag-select{background:rgba(252,185,19,.16);color:var(--gold-deep)}
 .uc-sm .uc-scene{height:118px}
 .uc-sm h3{font-size:16px}
