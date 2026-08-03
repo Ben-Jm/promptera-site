@@ -206,7 +206,14 @@
       var data=new URLSearchParams(new FormData(form)).toString();
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data})
         .then(function(r){
-          if(r.ok){ btn.textContent='Request sent. We\u2019ll reply within one working day'; }
+          if(r.ok){
+            btn.textContent='Request sent. We\u2019ll reply within one working day';
+            form.reset();
+            document.getElementById('ctxchip').classList.remove('on');
+            document.getElementById('ctxtext').textContent='';
+            document.getElementById('ctxfield').value='';
+            setTimeout(function(){ btn.textContent=original; btn.disabled=false; },6000);
+          }
           else{ throw new Error('bad status'); }
         })
         .catch(function(){

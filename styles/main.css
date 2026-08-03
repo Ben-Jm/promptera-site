@@ -259,8 +259,9 @@ h2{font-family:var(--display);font-size:clamp(30px,3.6vw,42px);font-weight:650;l
 .contact-card{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:32px}
 .contact-card .row{display:flex;flex-direction:column;gap:5px;margin-bottom:18px}
 .contact-card label{font-size:12px;font-weight:600;color:var(--muted)}
-.contact-card input,.contact-card select{font-family:var(--sans);font-size:14px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);transition:border-color .25s,box-shadow .25s}
-.contact-card input:focus,.contact-card select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(5,150,105,.12)}
+.contact-card input,.contact-card select,.contact-card textarea{font-family:var(--sans);font-size:14px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);transition:border-color .25s,box-shadow .25s}
+.contact-card input:focus,.contact-card select:focus,.contact-card textarea:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(5,150,105,.12)}
+.contact-card textarea{resize:vertical;min-height:88px}
 .contact-card .btn{width:100%;justify-content:center}
 .contact-fine{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center}
 @media (max-width:900px){.final-in{grid-template-columns:1fr}}
