@@ -211,7 +211,7 @@
         })
         .catch(function(){
           btn.textContent=original; btn.disabled=false;
-          alert('Something went wrong sending the form. Please email us directly at hello@promptera.co.bw');
+          alert('Something went wrong sending the form. Please email us directly at info@promptera.co.bw');
         });
     });
   }
