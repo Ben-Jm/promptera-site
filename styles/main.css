@@ -24,7 +24,7 @@
   --ease:cubic-bezier(0.16,1,0.3,1);
   --display:'Instrument Sans',system-ui,sans-serif;
   --sans:'Instrument Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --mono:'Instrument Sans',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
