@@ -63,40 +63,6 @@
     }, 4200);
   }
 
-  /* animated counters */
-  function animate(el){
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    var em = el.querySelector('em');
-    var raw = em.textContent;
-    var prefix = raw.indexOf('+') === 0 ? '+' : '';
-    var suffix = raw.indexOf('%') > -1 ? '%' : '';
-    if (reduce) { em.textContent = prefix + target + suffix; return; }
-    var start = null, dur = 1200;
-    function tick(ts){
-      if (!start) { start = ts; }
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      em.textContent = prefix + Math.round(target * eased) + suffix;
-      if (p < 1) { requestAnimationFrame(tick); }
-    }
-    requestAnimationFrame(tick);
-  }
-  var counted = false;
-  var strip = document.querySelector('.strip');
-  if ('IntersectionObserver' in window) {
-    var io2 = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting && !counted) {
-          counted = true;
-          document.querySelectorAll('.stat .n').forEach(animate);
-          io2.disconnect();
-        }
-      });
-    }, {threshold:0.4});
-    io2.observe(strip);
-  } else {
-    document.querySelectorAll('.stat .n').forEach(animate);
-  }
 })();
 
 (function(){
@@ -223,4 +189,51 @@
     });
   }
 
+})();
+
+(function(){
+  /* results grid: sector filter pills + "view all" expansion for a 5th+ case study */
+  var grid=document.getElementById('csGrid');
+  if(!grid){return;}
+  var cards=Array.prototype.slice.call(grid.querySelectorAll('.cs'));
+  var viewAllBtn=document.getElementById('csViewAll');
+  var filterBtns=Array.prototype.slice.call(document.querySelectorAll('.cs-filter'));
+  var VISIBLE_LIMIT=4;
+  var activeFilter='all';
+  var expanded=false;
+
+  function matchCount(filter){
+    if(filter==='all'){return cards.length;}
+    return cards.filter(function(c){ return c.getAttribute('data-sector')===filter; }).length;
+  }
+
+  function applyVisibility(){
+    var shown=0;
+    cards.forEach(function(card){
+      var matches=activeFilter==='all'||card.getAttribute('data-sector')===activeFilter;
+      var visible=matches&&(expanded||shown<VISIBLE_LIMIT);
+      if(matches){shown++;}
+      card.style.display=visible?'':'none';
+    });
+    if(viewAllBtn){ viewAllBtn.hidden=matchCount(activeFilter)<=VISIBLE_LIMIT||expanded; }
+  }
+
+  if(viewAllBtn){
+    viewAllBtn.addEventListener('click',function(){
+      expanded=true;
+      applyVisibility();
+    });
+  }
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      filterBtns.forEach(function(b){ b.classList.remove('on'); });
+      btn.classList.add('on');
+      activeFilter=btn.getAttribute('data-filter');
+      expanded=false;
+      applyVisibility();
+    });
+  });
+
+  applyVisibility();
 })();
