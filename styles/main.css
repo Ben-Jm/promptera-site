@@ -22,9 +22,9 @@
   --charcoal:#312F30;
   --radius:16px;
   --ease:cubic-bezier(0.16,1,0.3,1);
-  --display:'Instrument Sans',system-ui,sans-serif;
-  --sans:'Instrument Sans',system-ui,sans-serif;
-  --mono:'Instrument Sans',ui-monospace,monospace;
+  --display:'Ubuntu',system-ui,sans-serif;
+  --sans:'Ubuntu',system-ui,sans-serif;
+  --mono:'Ubuntu',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
