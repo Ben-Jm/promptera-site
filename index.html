@@ -13,16 +13,7 @@
 <script src="scripts/main.js" defer></script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P02VX2PM8D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P02VX2PM8D');
-</script>
-
+<!-- Google tag (gtag.js) is loaded only after cookie consent — see loadGoogleAnalytics() in scripts/main.js -->
 
 <body>
 
@@ -553,6 +544,7 @@
   <div class="wrap foot-base">
     <span>© 2026 Promptera. All rights reserved.</span>
     <span>Every interaction either creates value or leaks it.</span>
+    <button type="button" class="foot-cookie-link" id="cookiePrefsLink">Cookie preferences</button>
   </div>
 </footer>
 
@@ -571,6 +563,14 @@
   </div>
 </div>
 
+<!-- ============ COOKIE CONSENT ============ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p class="cookie-text">We use cookies for analytics to understand how visitors use this site. See our <a href="policies/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-ghost" id="cookieDecline">Decline</button>
+    <button type="button" class="btn btn-em" id="cookieAccept">Accept</button>
+  </div>
+</div>
 
 </body>
 </html>
