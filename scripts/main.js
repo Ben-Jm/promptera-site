@@ -192,6 +192,19 @@
 })();
 
 (function(){
+  /* where we work: accordion, one open at a time */
+  var heads = Array.prototype.slice.call(document.querySelectorAll('.uc-head'));
+  if (!heads.length) { return; }
+  heads.forEach(function(head){
+    head.addEventListener('click', function(){
+      var isOpen = head.getAttribute('aria-expanded') === 'true';
+      heads.forEach(function(h){ h.setAttribute('aria-expanded', 'false'); });
+      head.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+})();
+
+(function(){
   /* results grid: sector filter pills + "view all" expansion for a 5th+ case study */
   var grid=document.getElementById('csGrid');
   if(!grid){return;}
