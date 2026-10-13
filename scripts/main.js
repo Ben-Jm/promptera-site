@@ -16,6 +16,22 @@
   window.addEventListener('scroll', syncNavScrolled, {passive:true});
   syncNavScrolled();
 
+  /* where-we-work accordion: one vertical open at a time */
+  var vxItems = document.querySelectorAll('.vx-item');
+  vxItems.forEach(function(item){
+    item.querySelector('.vx-head').addEventListener('click', function(){
+      var opening = !item.classList.contains('open');
+      vxItems.forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.vx-head').setAttribute('aria-expanded', 'false');
+      });
+      if (opening) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
   /* mobile hamburger menu */
   var navToggle = document.getElementById('navToggle');
   var navMenu = document.getElementById('navMenu');
@@ -61,7 +77,14 @@
 (function(){
   /* contact context chip: any [data-ctx] element scrolls to the form and pre-fills the topic */
   var ctxchip = document.getElementById('ctxchip'), ctxtext = document.getElementById('ctxtext'), ctxfield = document.getElementById('ctxfield');
-  function goContact(ctx){
+  if (!ctxchip) { return; } /* pages without the contact form, e.g. cases/*.html */
+  var topicSelect = document.getElementById('cs');
+  function goContact(ctx, topic){
+    if (topic && topicSelect) {
+      for (var i = 0; i < topicSelect.options.length; i++) {
+        if (topicSelect.options[i].value === topic) { topicSelect.selectedIndex = i; break; }
+      }
+    }
     if (ctx) {
       ctxtext.textContent = ctx;
       ctxchip.classList.add('on');
@@ -76,8 +99,15 @@
     if (ctxfield) { ctxfield.value = ''; }
   });
   document.querySelectorAll('[data-ctx]').forEach(function(el){
-    el.addEventListener('click', function(e){ e.preventDefault(); goContact(el.getAttribute('data-ctx')); });
+    el.addEventListener('click', function(e){ e.preventDefault(); goContact(el.getAttribute('data-ctx'), el.getAttribute('data-topic')); });
   });
+
+  /* case study CTAs link here as index.html?ctx=...&topic=...#contact */
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('ctx') || params.get('topic')) {
+    goContact(params.get('ctx'), params.get('topic'));
+    history.replaceState(null, '', window.location.pathname + window.location.hash);
+  }
 
   /* Netlify form: AJAX submit for inline success (Netlify still records it) */
   var form = document.getElementById('cform');

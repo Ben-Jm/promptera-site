@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
 <script src="scripts/main.js" defer></script>
 </head>
@@ -18,10 +18,11 @@
 <body>
 
 <!-- ============ NAV ============ -->
-<header class="nav" id="nav">
+<header class="nav nav-over" id="nav">
   <div class="wrap nav-in">
     <a href="#top" class="logo" aria-label="Promptera home">
-      <img src="images/logo.png" alt="Promptera logo">
+      <img class="logo-light" src="images/logo_white.png" alt="Promptera logo">
+      <img class="logo-dark" src="images/logo.png" alt="" aria-hidden="true">
     </a>
     <div class="nav-menu" id="navMenu">
       <nav class="nav-links" aria-label="Primary">
@@ -31,7 +32,7 @@
         <a href="#results">Proof</a>
         <a href="#about">About</a>
       </nav>
-      <a href="#contact" class="btn btn-dark">Book the free diagnostic</a>
+      <a href="#contact" class="btn btn-gold">Book the free diagnostic</a>
     </div>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
       <span></span><span></span><span></span>
@@ -41,27 +42,12 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <!--<div class="hero-kicker rv">Adoption &amp; Experience Consultancy · Botswana</div> -->
-      <h1 class="rv d1">Where is your business <span class="hl">leaking value</span>?</h1>
-      <p class="hero-sub rv d2">Customers abandon journeys. Employees work around broken processes. Systems go underused. Promptera finds the friction, shows you what it is costing, and helps you fix it.</p>
-      <div class="hero-ctas rv d3">
-        <a href="#contact" class="btn btn-em">Book the free 2-hour diagnostic</a>
-        <a href="#how" class="btn btn-ghost">See how we work</a>
-      </div>
-      <!-- <p class="hero-micro rv d4">One journey. Two hours. Findings yours to keep. No obligation.</p> -->
-    </div>
-    <div class="hero-visual rv d2" aria-label="Illustrative example of value leaking from a software investment">
-      <div class="hero-visual-top"><span>Promptera · ROI leakage</span><span>Illustrative</span></div>
-      <div class="hero-visual-title">A journey can look fine on paper and still cost you.</div>
-      <div class="leak">
-        <div class="leak-row"><span>Customer journey time</span><b>47 min</b></div>
-        <div class="leak-row"><span>Unnecessary handovers</span><b class="neg">3</b></div>
-        <div class="leak-row"><span>Duplicate data entry</span><b class="neg">2x</b></div>
-        <div class="leak-row"><span>Priority opportunity</span><b class="neg">Redesign</b></div>
-        <div class="leak-cap">Illustrative <b>ROI Leakage Assessment</b>. Every full audit includes yours.</div>
-      </div>
+  <div class="wrap hero-in">
+    <h1 class="rv">Your business is <span class="hl">leaking</span> to whoever makes things <span class="hl">easier</span>.</h1>
+    <p class="hero-sub rv d1">A queue, a booking, a phone call, a form, an app. We audit the journeys your customers and staff actually move through, and fix where the experience leaks value. Measured before and after.</p>
+    <div class="hero-ctas rv d2">
+      <a href="#contact" class="btn btn-gold">Book the free 2-hour diagnostic</a>
+      <a href="#how" class="btn btn-light">See how we work</a>
     </div>
   </div>
 </section>
@@ -89,7 +75,7 @@
 <section id="problem">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-eyebrow rv">The problem</div>
+      <!-- <div class="sec-eyebrow rv">The problem</div> -->
       <h2 class="rv d1">Experience problems rarely arrive labelled “experience problem.”</h2>
       <p class="sec-sub rv d2">They show up as operational problems, customer complaints, wasted staff time, low adoption and abandoned processes.</p>
     </div>
@@ -106,7 +92,7 @@
 <section id="services" class="dark">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-eyebrow rv">The method</div>
+      <!-- <div class="sec-eyebrow rv">The method</div> -->
       <h2 class="rv d1">Find it. Fix it. Adopt it. Prove it.</h2>
       <p class="sec-sub rv d2">Whatever the sector, every engagement runs on the same four-step engine.</p>
     </div>
@@ -123,7 +109,7 @@
 <section id="diagnostic">
   <div class="wrap offer">
     <div>
-      <div class="sec-eyebrow rv">Start here</div>
+      <!-- <div class="sec-eyebrow rv">Start here</div> -->
       <h2 class="rv d1">The Promptera Experience Diagnostic</h2>
       <p class="sec-sub rv d2" style="font-size:18px">Two hours. One journey. Findings yours to keep.</p>
       <p class="rv d2" style="color:var(--body);margin-top:14px;max-width:520px;line-height:1.65">Tell us which customer, employee or digital journey frustrates people most. We observe it on-site or remotely, identify the highest-value friction and give you written findings.</p>
@@ -147,7 +133,7 @@
 <section id="how">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-eyebrow rv">How we work</div>
+      <!-- <div class="sec-eyebrow rv">How we work</div> -->
       <h2 class="rv d1">Start free. Prove it small. Scale what works.</h2>
     </div>
     <div class="steps">
@@ -156,7 +142,7 @@
       <div class="step rv d2"><b>03 / Scale</b><h3>Full journey redesign</h3><p>A complete assessment and redesign across the journey, connected touchpoints included.</p></div>
       <div class="step rv d3"><b>04 / Embed</b><h3>Adoption program</h3><p>Onboarding, training, and monthly KPI monitoring, so the gains stick and new friction gets caught early.</p></div>
     </div>
-    <p class="ladder-note rv d3">Every step earns the next. In a market where reputation travels fast, that's how it should be.</p>
+    <!-- <p class="ladder-note rv d3">Every step earns the next. In a market where reputation travels fast, that's how it should be.</p> -->
     <div class="rung-cta rv d3"><a href="#contact" class="btn btn-em" data-ctx="Free 2-hour diagnostic">Book your free diagnostic <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
@@ -165,65 +151,67 @@
 <section id="where">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-eyebrow rv">Where we work</div>
-      <h2 class="rv d1">Every queue, form, and wait is a journey we can fix.</h2>
-      <p class="sec-sub rv d2">Customer experience and employee experience, across sectors and domains. The method doesn't change based on where people wait, ask, or fill something in, whether that's on a screen, on a shop floor, or both at once.</p>
+      <!-- <div class="sec-eyebrow rv">Where we work</div> -->
+      <h2 class="rv d1">We don't sell “CX.” We fix specific journeys.</h2>
+      <p class="sec-sub rv d2">Start with the moment that matters most to your organisation.</p>
     </div>
-    <div class="sectors">
-      <article class="sector rv">
-        <div class="sector-img"><img src="images/where/retail.jpg" alt="Retail store experience"></div>
-        <h3>Retail Experience</h3><span class="tag tag-now">Available now</span>
-        <p>Customers rarely complain. They just don't come back. We audit your store the way a shopper experiences it, queues, layout, the ad-hoc WhatsApp orders nobody's tracking, and fix the friction.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: retail experience audit">Talk to us <span aria-hidden="true">→</span></a>
+    <div class="vx">
+      <article class="vx-item rv open">
+        <h3 class="vx-h"><button type="button" class="vx-head" id="vx-fin-h" aria-expanded="true" aria-controls="vx-fin"><span class="vx-n">01</span><span class="vx-t">Financial services</span><span class="tag tag-now">Available now</span><span class="vx-ic" aria-hidden="true"></span></button></h3>
+        <div class="vx-panel" id="vx-fin" role="region" aria-labelledby="vx-fin-h"><div class="vx-clip"><div class="vx-in">
+          <div class="vx-img"><img src="images/where/banking.jpg" alt="Branch and banking hall experience" loading="lazy"></div>
+          <div class="vx-txt"><p>Account opening, lending, branches, digital banking, complaints and onboarding.</p></div>
+          <a href="#contact" class="vx-go" data-ctx="Re: financial services journey" data-topic="Financial services" aria-label="Talk to us about financial services"><span aria-hidden="true">↗</span></a>
+        </div></div></div>
       </article>
-      <article class="sector rv d1">
-        <div class="sector-img"><img src="images/where/hospitality.jpg" alt="Guest and hospitality experience"></div>
-        <h3>Guest Experience</h3><span class="tag tag-now">Available now</span>
-        <p>Lodges and hotels compete globally, and the competition is decided in moments: the arrival after a long transfer, the question nobody answered. We fix the moments that decide your reviews.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: guest experience audit">Talk to us <span aria-hidden="true">→</span></a>
+      
+      <article class="vx-item rv d2">
+        <h3 class="vx-h"><button type="button" class="vx-head" id="vx-retail-h" aria-expanded="false" aria-controls="vx-retail"><span class="vx-n">02</span><span class="vx-t">Retail &amp; hospitality</span><span class="tag tag-now">Available now</span><span class="vx-ic" aria-hidden="true"></span></button></h3>
+        <div class="vx-panel" id="vx-retail" role="region" aria-labelledby="vx-retail-h"><div class="vx-clip"><div class="vx-in">
+          <div class="vx-img"><img src="images/where/retail.jpg" alt="Retail store experience" loading="lazy"></div>
+          <div class="vx-txt"><p>Arrival, ordering, purchase, service, payment, complaints and loyalty moments.</p></div>
+          <a href="#contact" class="vx-go" data-ctx="Re: retail & hospitality journey" data-topic="Retail & hospitality" aria-label="Talk to us about retail & hospitality"><span aria-hidden="true">↗</span></a>
+        </div></div></div>
       </article>
-      <article class="sector rv d2">
-        <div class="sector-img"><img src="images/where/banking.jpg" alt="Branch and banking hall experience"></div>
-        <h3>Branch &amp; Financial Sector</h3><span class="tag tag-now">Available now</span>
-        <p>Customers don't switch banks over rates. They switch over Tuesday mornings in your queue. We audit the hall and the app together and show you exactly which visits belong in the channel you already paid for.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: branch & financial sector audit">Talk to us <span aria-hidden="true">→</span></a>
+
+      <article class="vx-item rv">
+        <h3 class="vx-h"><button type="button" class="vx-head" id="vx-edu-h" aria-expanded="false" aria-controls="vx-edu"><span class="vx-n">03</span><span class="vx-t">Education</span><span class="tag tag-now">Available now</span><span class="vx-ic" aria-hidden="true"></span></button></h3>
+        <div class="vx-panel" id="vx-edu" role="region" aria-labelledby="vx-edu-h"><div class="vx-clip"><div class="vx-in">
+          <div class="vx-img"><img src="images/where/education.jpg" alt="Student onboarding experience" loading="lazy"></div>
+          <div class="vx-txt"><p>Applications, registration, onboarding, student services and internal systems.</p></div>
+          <a href="#contact" class="vx-go" data-ctx="Re: education journey" data-topic="Education" aria-label="Talk to us about education"><span aria-hidden="true">↗</span></a>
+        </div></div></div>
       </article>
-      <article class="sector rv">
-        <div class="sector-img"><img src="images/where/education.jpg" alt="Student onboarding experience"></div>
-        <h3>Student Life Experience</h3><span class="tag tag-now">Available now</span>
-        <p>Registration queues. Scattered information. First-years lost right when the experience should be winning their loyalty.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: student life experience audit">Talk to us <span aria-hidden="true">→</span></a>
+
+      
+      <article class="vx-item rv d2">
+        <h3 class="vx-h"><button type="button" class="vx-head" id="vx-ent-h" aria-expanded="false" aria-controls="vx-ent"><span class="vx-n">04</span><span class="vx-t">Enterprise operations</span><span class="tag tag-now">Available now</span><span class="vx-ic" aria-hidden="true"></span></button></h3>
+        <div class="vx-panel" id="vx-ent" role="region" aria-labelledby="vx-ent-h"><div class="vx-clip"><div class="vx-in">
+          <div class="vx-img"><img src="images/bridgegap.jpg" alt="Internal workflow and approvals system" loading="lazy"></div>
+          <div class="vx-txt"><p>Employee onboarding, workflows, system adoption, approvals and internal service journeys.</p></div>
+          <a href="#contact" class="vx-go" data-ctx="Re: enterprise operations journey" data-topic="Enterprise operations" aria-label="Talk to us about enterprise operations"><span aria-hidden="true">↗</span></a>
+        </div></div></div>
       </article>
-      <article class="sector rv d1">
-        <div class="sector-img"><img src="images/where/restaurant.jpg" alt="Restaurant and QSR experience"></div>
-        <h3>Restaurant &amp; QSR</h3><span class="tag tag-now">Available now</span>
-        <p>Menus that stall decisions. Waits that feel longer than they actually are. Payment friction that sours a good meal right at the end.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: restaurant & QSR audit">Talk to us <span aria-hidden="true">→</span></a>
+
+      <article class="vx-item rv d1">
+        <h3 class="vx-h"><button type="button" class="vx-head" id="vx-health-h" aria-expanded="false" aria-controls="vx-health"><span class="vx-n">05</span><span class="vx-t">Healthcare</span><span class="tag tag-select">Selective engagements</span><span class="vx-ic" aria-hidden="true"></span></button></h3>
+        <div class="vx-panel" id="vx-health" role="region" aria-labelledby="vx-health-h"><div class="vx-clip"><div class="vx-in">
+          <div class="vx-img"><img src="images/where/healthcare.jpg" alt="Patient experience" loading="lazy"></div>
+          <div class="vx-txt"><p>Booking, registration, waiting, consultation, payment, discharge and follow-up.</p></div>
+          <a href="#contact" class="vx-go" data-ctx="Re: healthcare journey" data-topic="Healthcare" aria-label="Talk to us about healthcare"><span aria-hidden="true">↗</span></a>
+        </div></div></div>
       </article>
-      <article class="sector rv d2">
-        <div class="sector-img"><img src="images/where/events.jpg" alt="Events, sports and nightlife experience"></div>
-        <h3>Events, Sports &amp; Nightlife</h3><span class="tag tag-select">Selective engagements</span>
-        <p>Entry queues that eat the first hour, bar service that can't match half-time. Flow design for when everyone arrives at once.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: events, sports & nightlife audit">Talk to us <span aria-hidden="true">→</span></a>
+
+      <article class="vx-item rv d1">
+        <h3 class="vx-h"><button type="button" class="vx-head" id="vx-public-h" aria-expanded="false" aria-controls="vx-public"><span class="vx-n">06</span><span class="vx-t">Public services</span><span class="tag tag-select">Selective engagements</span><span class="vx-ic" aria-hidden="true"></span></button></h3>
+        <div class="vx-panel" id="vx-public" role="region" aria-labelledby="vx-public-h"><div class="vx-clip"><div class="vx-in">
+          <div class="vx-img"><img src="images/where/government.jpg" alt="Citizen services experience" loading="lazy"></div>
+          <div class="vx-txt"><p>Applications, permits, documentation, queues, communication and completion.</p></div>
+          <a href="#contact" class="vx-go" data-ctx="Re: public services journey" data-topic="Public services" aria-label="Talk to us about public services"><span aria-hidden="true">↗</span></a>
+        </div></div></div>
       </article>
-      <article class="sector rv">
-        <div class="sector-img"><img src="images/where/healthcare.jpg" alt="Patient experience"></div>
-        <h3>Patient Experience</h3><span class="tag tag-select">Selective engagements</span>
-        <p>Waiting without knowing how long it'll be. Writing the same details down three times. Then a pharmacy queue after the consult, on top of it all.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: patient experience audit">Talk to us <span aria-hidden="true">→</span></a>
-      </article>
-      <article class="sector rv d1">
-        <div class="sector-img"><img src="images/where/transport.jpg" alt="Passenger and transport experience"></div>
-        <h3>Passenger &amp; Transport</h3><span class="tag tag-select">Selective engagements</span>
-        <p>Wayfinding that assumes you already know where you're going. Information only staff have access to. Queues with no order and no updates.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: passenger & transport audit">Talk to us <span aria-hidden="true">→</span></a>
-      </article>
-      <article class="sector rv d2">
-        <div class="sector-img"><img src="images/where/government.jpg" alt="Citizen services experience"></div>
-        <h3>Citizen Services</h3><span class="tag tag-select">Selective engagements</span>
-        <p>Forms rejected after the queue instead of before it, multiple trips for one service. Redesign that restores dignity to public queues.</p>
-        <a href="#contact" class="card-btn" data-ctx="Re: citizen services audit">Talk to us <span aria-hidden="true">→</span></a>
-      </article>
+
+
     </div>
     <p class="ladder-note rv d4">Employee experience runs through all of it. The staff-side systems, the handovers, the workarounds behind every customer moment: all of it is part of every audit.</p>
   </div>
@@ -233,59 +221,39 @@
 <section id="results" class="dark">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-eyebrow rv">Proof</div>
+      <!-- <div class="sec-eyebrow rv">Proof</div> -->
       <h2 class="rv d1">Measured before. <br>Measured after.<br>That's the whole point.</h2>
-      <p class="sec-sub rv d2">These are results from our experience and adoption redesigns. It's the same method we now bring to shop floors, banking halls, and guest journeys across Botswana.</p>
+      <p class="sec-sub rv d2">These are results from our experience and adoption redesigns. It's the same method we bring to every journey.</p>
     </div>
     <div class="cs-grid">
-      <article class="cs rv">
-        <div class="cs-hero g1"><img class="cs-img" src="images/bridgegap.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-        <div class="cs-body">
-          <div class="cs-sector">Fintech · Lending</div>
-          <h3 class="cs-title">Micro-Lender Onboarding</h3>
-          <div class="cs-stats">
-            <div class="cs-stat"><div class="v">~40%</div><div class="k">less document processing time</div></div>
-            <div class="cs-stat"><div class="v">Weeks→days</div><div class="k">approval cycles</div></div>
-          </div>
-          <a href="#contact" class="card-btn" data-ctx="Re: journey like the micro-lender onboarding case">Fix a journey like this <span aria-hidden="true">→</span></a>
+      <a class="cs rv" href="cases/micro-lender-onboarding.html">
+        <div class="cs-head">
+          <div class="cs-sector">Financial services · lending</div>
+          <h3 class="cs-title">Micro-lender onboarding</h3>
         </div>
-      </article>
-      <article class="cs rv d1">
-        <div class="cs-hero g2"><img class="cs-img" src="images/case-platform.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-        <div class="cs-body">
-          <div class="cs-sector">Multi-sector · Member services</div>
-          <h3 class="cs-title">Multi-Product Member Platform</h3>
-          <div class="cs-stats">
-            <div class="cs-stat"><div class="v">~65%</div><div class="k">less time per application</div></div>
-            <div class="cs-stat"><div class="v">10+→1</div><div class="k">forms consolidated</div></div>
-          </div>
-          <a href="#contact" class="card-btn" data-ctx="Re: journey like the member platform case">Fix a journey like this <span aria-hidden="true">→</span></a>
+        <div class="cs-stats"><div class="cs-stat"><div class="v">~40%</div><div class="k">less document processing time</div></div><div class="cs-stat"><div class="v">Weeks → days</div><div class="k">approval cycle</div></div></div>
+      </a>
+      <a class="cs rv d1" href="cases/member-platform.html">
+        <div class="cs-head">
+          <div class="cs-sector">Multi-sector · member services</div>
+          <h3 class="cs-title">Member platform redesign</h3>
         </div>
-      </article>
-      <article class="cs rv d1">
-        <div class="cs-hero g3"><img class="cs-img" src="images/case-compliance.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-        <div class="cs-body">
-          <div class="cs-sector">Compliance · Mining</div>
-          <h3 class="cs-title">Vendor Compliance Platform</h3>
-          <div class="cs-stats">
-            <div class="cs-stat"><div class="v">65%</div><div class="k">less paper-based workload</div></div>
-            <div class="cs-stat"><div class="v">Self-serve</div><div class="k">uploads replace manual checks</div></div>
-          </div>
-          <a href="#contact" class="card-btn" data-ctx="Re: journey like the vendor compliance case">Fix a journey like this <span aria-hidden="true">→</span></a>
+        <div class="cs-stats"><div class="cs-stat"><div class="v">~65%</div><div class="k">less time per application</div></div><div class="cs-stat"><div class="v">10+ → 1</div><div class="k">forms consolidated</div></div></div>
+      </a>
+      <a class="cs rv d1" href="cases/vendor-compliance.html">
+        <div class="cs-head">
+          <div class="cs-sector">Compliance · mining</div>
+          <h3 class="cs-title">Vendor compliance platform</h3>
         </div>
-      </article>
-      <article class="cs rv d2">
-        <div class="cs-hero g4"><img class="cs-img" src="images/case-playbook.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-        <div class="cs-body">
-          <div class="cs-sector">Financial Services · Brand &amp; Physical Experience</div>
-          <h3 class="cs-title">BSB: Tiered Debit Card Range</h3>
-          <div class="cs-stats">
-            <div class="cs-stat"><div class="v">3 tiers</div><div class="k">one brand family</div></div>
-            <div class="cs-stat"><div class="v">At a glance</div><div class="k">tier recognisable without reading</div></div>
-          </div>
-          <a href="#contact" class="card-btn" data-ctx="Re: journey like the tiered debit card case">Fix a journey like this <span aria-hidden="true">→</span></a>
+        <div class="cs-stats"><div class="cs-stat"><div class="v">65%</div><div class="k">less paper-based workload</div></div><div class="cs-stat"><div class="v">Self-serve</div><div class="k">uploads replace manual checks</div></div></div>
+      </a>
+      <a class="cs rv d2" href="cases/tiered-debit-cards.html">
+        <div class="cs-head">
+          <div class="cs-sector">Financial services · brand &amp; physical</div>
+          <h3 class="cs-title">BSB tiered debit card range</h3>
         </div>
-      </article>
+        <div class="cs-stats"><div class="cs-stat"><div class="v">3 tiers</div><div class="k">one brand family</div></div><div class="cs-stat"><div class="v">At a glance</div><div class="k">tier recognisable without reading</div></div></div>
+      </a>
     </div>
   </div>
 </section>
@@ -294,7 +262,7 @@
 <section id="clients">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-eyebrow rv">Trusted with journeys that matter</div>
+      <!-- <div class="sec-eyebrow rv">Trusted with journeys that matter</div> -->
       <h2 class="rv d1">Organisations that let us sit inside the journey, not just audit it from the outside.</h2>
     </div>
     <div class="logo-wall rv d2">
@@ -312,7 +280,7 @@
   <div class="wrap">
     <div class="about-grid">
       <div>
-        <div class="sec-eyebrow rv">About Promptera</div>
+        <!-- <div class="sec-eyebrow rv">About Promptera</div> -->
         <h2 class="rv d1">Why Promptera exists, what we see differently, and what we do about it.</h2>
         <div class="about-story rv d2">
           <p>The queue that keeps moving without explanation.
@@ -383,7 +351,7 @@ We believe those problems can be seen, understood and fixed.</p>
 <section class="final dark" id="contact">
   <div class="wrap final-in">
     <div>
-      <div class="sec-eyebrow rv">Start free</div>
+      <!-- <div class="sec-eyebrow rv">Start free</div> -->
       <h2 class="rv d1">Two hours. One journey.<br>Findings yours to keep.</h2>
       <p class="sec-sub rv d2">Tell us which journey frustrates people the most, whether that's customers or staff, on screens or on floors. We'll spend two hours on it, on-site or over a screen-share, and send you written findings. No charge, no obligation, and no pitch until you ask for one.</p>
       <p class="hero-note rv d3" style="margin-top:20px">info@promptera.co.bw · +267 71 780 986 · Gaborone, Botswana</p>
@@ -398,11 +366,12 @@ We believe those problems can be seen, understood and fixed.</p>
       <div class="row"><label for="ce">Work email</label><input id="ce" name="email" type="email" placeholder="you@company.co.bw" required></div>
       <div class="row"><label for="cs">What should we look at first?</label>
         <select id="cs" name="topic">
-          <option>A store, branch, or venue journey (free diagnostic)</option>
-          <option>A guest / hospitality journey</option>
-          <option>A form or process people abandon</option>
-          <option>A system staff aren't using properly</option>
-          <option>An employee or onboarding journey</option>
+          <option>Financial services</option>
+          <option>Healthcare</option>
+          <option>Retail &amp; hospitality</option>
+          <option>Education</option>
+          <option>Public services</option>
+          <option>Enterprise operations</option>
           <option>Not sure yet, help me choose</option>
         </select>
       </div>
@@ -426,7 +395,7 @@ We believe those problems can be seen, understood and fixed.</p>
       <a href="#top" class="logo" aria-label="Promptera home">
         <img src="images/logo_char.png" alt="Promptera logo">
       </a>
-      <p class="foot-tag">We fix the experiences that frustrate. Every queue, every form, every call, every system. So people can get on with what matters.</p>
+      <p class="foot-tag">We fix the journeys that frustrate. Every queue, every form, every call, every system. So people can get on with what matters.</p>
     </div>
     <div class="foot-col"><b>Company</b>
       <a href="#problem">The problem</a><br>
