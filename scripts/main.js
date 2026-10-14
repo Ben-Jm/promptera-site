@@ -16,6 +16,24 @@
   window.addEventListener('scroll', syncNavScrolled, {passive:true});
   syncNavScrolled();
 
+  /* scroll progress bar */
+  var progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+  var progressTick = false;
+  function syncProgress(){
+    progressTick = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
+  }
+  function queueProgress(){
+    if (!progressTick) { progressTick = true; requestAnimationFrame(syncProgress); }
+  }
+  window.addEventListener('scroll', queueProgress, {passive:true});
+  window.addEventListener('resize', queueProgress);
+  syncProgress();
+
   /* where-we-work accordion: one vertical open at a time */
   var vxItems = document.querySelectorAll('.vx-item');
   vxItems.forEach(function(item){
@@ -161,10 +179,17 @@
   var cookieDecline = document.getElementById('cookieDecline');
   var cookiePrefsLink = document.getElementById('cookiePrefsLink');
 
+  if (!cookieBanner) { return; } /* pages without the banner, e.g. policies/*.html */
+
   function showCookieBanner(){ cookieBanner.classList.add('show'); }
   function hideCookieBanner(){ cookieBanner.classList.remove('show'); }
 
-  var consent = localStorage.getItem('cookie-consent');
+  /* storage can throw when blocked (private mode, strict settings): fall back to asking every visit */
+  function getConsent(){ try { return localStorage.getItem('cookie-consent'); } catch (e) { return null; } }
+  function setConsent(v){ try { localStorage.setItem('cookie-consent', v); } catch (e) {} }
+  function clearConsent(){ try { localStorage.removeItem('cookie-consent'); } catch (e) {} }
+
+  var consent = getConsent();
   if (consent === 'accepted') {
     loadGoogleAnalytics();
   } else if (consent !== 'declined') {
@@ -172,18 +197,18 @@
   }
 
   cookieAccept.addEventListener('click', function(){
-    localStorage.setItem('cookie-consent', 'accepted');
+    setConsent('accepted');
     loadGoogleAnalytics();
     hideCookieBanner();
   });
 
   cookieDecline.addEventListener('click', function(){
-    localStorage.setItem('cookie-consent', 'declined');
+    setConsent('declined');
     hideCookieBanner();
   });
 
   cookiePrefsLink.addEventListener('click', function(){
-    localStorage.removeItem('cookie-consent');
+    clearConsent();
     showCookieBanner();
   });
 })();
