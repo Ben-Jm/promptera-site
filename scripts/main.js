@@ -163,6 +163,7 @@
   function loadGoogleAnalytics(){
     if (gaLoaded) { return; }
     gaLoaded = true;
+    window['ga-disable-' + GA_ID] = false;
     window.dataLayer = window.dataLayer || [];
     function gtag(){ window.dataLayer.push(arguments); }
     window.gtag = gtag;
@@ -172,6 +173,21 @@
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     document.head.appendChild(s);
+  }
+
+  /* undo an earlier acceptance: stop GA on this page and delete its cookies (_ga, _ga_<id>, _gid, _gat) */
+  function removeGoogleAnalytics(){
+    window['ga-disable-' + GA_ID] = true;
+    var host = window.location.hostname.split('.');
+    var domains = [''];
+    for (var i = 0; i < host.length - 1; i++) { domains.push('; domain=.' + host.slice(i).join('.')); }
+    document.cookie.split(';').forEach(function(c){
+      var name = c.split('=')[0].trim();
+      if (!/^_(ga|gid|gat)/.test(name)) { return; }
+      domains.forEach(function(d){
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+      });
+    });
   }
 
   var cookieBanner = document.getElementById('cookieBanner');
@@ -192,7 +208,9 @@
   var consent = getConsent();
   if (consent === 'accepted') {
     loadGoogleAnalytics();
-  } else if (consent !== 'declined') {
+  } else if (consent === 'declined') {
+    removeGoogleAnalytics(); /* clears leftovers from a past acceptance */
+  } else {
     showCookieBanner();
   }
 
@@ -204,7 +222,9 @@
 
   cookieDecline.addEventListener('click', function(){
     setConsent('declined');
+    removeGoogleAnalytics();
     hideCookieBanner();
+    if (gaLoaded) { window.location.reload(); } /* the loaded gtag script can't be unloaded, so start a clean page */
   });
 
   cookiePrefsLink.addEventListener('click', function(){
