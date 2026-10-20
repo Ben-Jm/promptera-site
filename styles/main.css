@@ -90,6 +90,8 @@ a{color:inherit;text-decoration:none}
 .btn-gold:hover{background:#F2AE00;box-shadow:0 10px 24px -10px rgba(252,185,19,.55)}
 .btn-light{background:#fff;color:var(--ink)}
 .btn-light:hover{background:#F1F2EF;box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid #fff}
+.btn-outline-light:hover{background:rgba(255,255,255,.1)}
 .nav .btn{padding:10px 18px}
 @media (max-width:860px){
   .nav-toggle{display:flex}
